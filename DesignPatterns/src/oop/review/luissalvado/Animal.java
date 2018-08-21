@@ -1,4 +1,4 @@
-package dpatterns.java.luissalvado;
+package oop.review.luissalvado;
 
 public class Animal {
 	
@@ -12,12 +12,18 @@ public class Animal {
 	public void setName(String name) {
 		this.name = name;
 	}
+	
 	public int getWeight() {
 		return weight;
 	}
 	public void setWeight(int weight) {
-		this.weight = weight;
+		if (weight > 0) {
+			this.weight = weight;
+		} else {
+			System.out.println("Weight must be bigger than 0!");
+		}
 	}
+	
 	public String getSound() {
 		return sound;
 	}
@@ -25,6 +31,4 @@ public class Animal {
 		this.sound = sound;
 	}
 	
-	
-
 }
